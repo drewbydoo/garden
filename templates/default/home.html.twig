@@ -1,0 +1,107 @@
+{% extends "base.html.twig" %}
+{% block body %}
+    <h2 class="sectionTitle">Garden Planner Home Page</h2>
+    <div class="container default-container">
+        <div class="section-info">
+            <div>Garden Planner Goals</div>
+            <ul>
+                <li>Establish garden bed dimensions</li>
+                <li>Establish categories for plants</li>
+                <li>Give planting recommendations based on plant category and available space</li>
+                <li>Give recommendations for seed start/direct sow dates based on last frost date</li>
+                <li>Push notifications to email/smart phone/calendar invites for reminders</li>
+            </ul>
+
+            <div>App Goals</div>
+            <ul>
+                <li>Mobile friendly</li>
+                <li>Email notifications</li>
+                <li>User friendly interfaces</li>
+                <li>Account creation</li>
+            </ul>
+
+            <h3>App Structure</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Entity Name</th>
+                        <th>Foreseeable Fields</th>
+                        <th>Interactions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Garden Plot</td>
+                        <td>
+                            <ul>
+                                <li>Name</li>
+                                <li>Length</li>
+                                <li>Width</li>
+                                <li>Total Area</li>
+                                <li>Plants</li>
+                                <li>Occupied Area</li>
+                                <li>User</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Plants (Custom)</li>
+                                <li>Users</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Plants (Static)</td>
+                        <td>
+                            <ul>
+                                <li>Name</li>
+                                <li>Days to Harvest (AVG)</li>
+                                <li>Frost Hardy?</li>
+                                <li>Plant Season</li>
+                                <li>Direct Sow?</li>
+                            </ul>
+                        </td>
+                        <td>Plants (Custom)</td>
+                    </tr>
+                    <tr>
+                        <td>Plants (Custom)</td>
+                        <td>
+                            <ul>
+                                <li>Name</li>
+                                <li>Days to Harvest (AVG)</li>
+                                <li>Garden Plot or Pot</li>
+                                <li>User</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Plants (Static)</li>
+                                <li>User</li>
+                                <li>Garden Plot</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>User</td>
+                        <td>
+                            <ul>
+                                <li>Username</li>
+                                <li>Email</li>
+                                <li>Garden Plot</li>
+                                <li>Plants (Custom)</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Garden Plot</li>
+                                <li>Plants (Custom)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
+{% block inlinejavascripts %}
+{% endblock %}
