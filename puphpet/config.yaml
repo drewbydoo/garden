@@ -301,7 +301,7 @@ nodejs:
 mariadb:
     install: '1'
     settings:
-        version: '10.1'
+        version: '10.2'
         root_password: garden
         override_options: {  }
     users:

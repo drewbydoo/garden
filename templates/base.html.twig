@@ -1,11 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+        <div class="header">
+            <nav class="main-menu">
+                <a class="menu-link" href="{{ path('home') }}">home</a>
+                {% if is_granted('ROLE_USER') %}
+                    <a class="menu-link" href="{{ path('logout') }}">Log out</a>
+                {% else %}
+                    <a class="menu-link" href="{{ path('login') }}">Login</a>
+                    <a class="menu-link" href="{{ path('register') }}">Register</a>
+                {% endif %}
+            </nav>
+        </div>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
